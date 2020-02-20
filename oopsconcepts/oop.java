@@ -1,6 +1,32 @@
 
 package practice.oopsconcepts;
 
+
+//Loose Coupling
+interface Food{
+	public void getVeg();
+	}
+class Sandwich implements Food{
+	private int v=5;
+	public void getVeg() {
+		System.out.println("Veg S");
+	}
+}
+class Burger implements Food{
+	private int v=4;
+	public void getVeg() {
+		System.out.println("Veg B");
+	}
+}
+public class oop{
+	public static void main(String args[]) {
+		Food s=new Burger();
+		s.getVeg();
+	}
+}
+
+
+/*
 //DIP
 interface ILogger{
 	public void loginfo();
@@ -27,7 +53,7 @@ class oop{
 		logg.logging();
 	}
 }
-
+*/
 
 //Delegation Principle
 /*
