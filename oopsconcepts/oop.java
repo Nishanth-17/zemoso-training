@@ -1,7 +1,52 @@
-
+ 
 package practice.oopsconcepts;
+import java.time.*;
+class oop{
+	public static void main(String args[]) {
+	int a;
+	int b=12;
+	int c=123;
+	System.out.println("b");
+	}
+}
+/*
+//Passing reference as a parameter
+class City{
+	public int x;
+	static int q=90;
+	//static {
+		//q=40;
+	//}
+	protected int y;
+	private int z;
+    public City(int x,int y,int z) {
+    	this.x=x;
+    	this.y=y;
+    	this.z=z;
+    }
+}
+class State{
+	City obj;
+	private int a;
+	public State(City obj,int a) {
+		this.obj=obj;
+		this.a=a;
+	}
+	public void display() {
+		System.out.println(obj.y+" "+a);
+	}
+}
+class oop{
+	public static void main(String args[]) {
+		City ob=new City(10,20,30);
+		System.out.println(ob.q);
+		State st=new State(ob,50);
+		st.display();
+	}
+}
+*/
 
-
+/*
 //Loose Coupling
 interface Food{
 	public void getVeg();
@@ -22,9 +67,11 @@ public class oop{
 	public static void main(String args[]) {
 		Food s=new Burger();
 		s.getVeg();
+		LocalDate date=LocalDate.now();
+		System.out.println(date);
 	}
 }
-
+*/
 
 /*
 //DIP
