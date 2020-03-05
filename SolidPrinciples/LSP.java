@@ -27,20 +27,26 @@ class Ather extends Scooter{
 public class LSP {
 
 	public static void main(String[] args) {
-		Batteryscooter bs=new Batteryscooter();
+		Ather bs=new Ather();
 		bs.fuelType();	
 	}
 }
 */
 
 //LISKOV'S SUBSTITUTION PRINCIPLE
-abstract class Scooter{
-	abstract void topSpeed();
+class Scooter{
+	void topSpeed() {
+	}
 	void fuelType() {
 	}
 }
-abstract class Batteryscooter extends Scooter{
-	abstract void noFuel();
+class Batteryscooter{
+	void noFuel() {
+		//This vehicle requires no fuel
+	}
+	void topSpeed() {
+		//Provide the top speed 
+	}
 }
 class Activa extends Scooter{
 	public void topSpeed() {

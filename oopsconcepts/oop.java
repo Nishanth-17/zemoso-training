@@ -1,13 +1,16 @@
  
 package practice.oopsconcepts;
 import java.time.*;
-class oop{
-	public static void main(String args[]) {
-	int a;
-	int b=12;
-	int c=123;
-	System.out.println("b");
+abstract class Ab{
+	public void print() {
+		System.out.println("Hello");
 	}
+}
+class oop extends Ab{
+	public static void main(String args[]) {
+		oop obj=new oop();
+		obj.print();
+}
 }
 /*
 //Passing reference as a parameter

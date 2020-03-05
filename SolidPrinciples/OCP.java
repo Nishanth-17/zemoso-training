@@ -26,44 +26,54 @@ public class OCP {
 
 //OPEN CLOSED PRINCIPLE
 class Mobile{
+	protected String mobileName;
+	Mobile(String mobileName){
+		this.mobileName=mobileName;
+	}
 	public void features() {
 		//System.out.println("6.0 inch display");
 		//System.out.println("HD resolution");
 		//System.out.println("3000 mAH Battery");
 	}
-	public void displayPrice(String Mobilename) {	
-		//System.out.println("Price of "+ Mobilename +" : "+ 10000);
+	public void displayPrice() {	
+		//System.out.println("Price of "+ mobileName +" : "+ 10000);
 	}
 }
 class Apple extends Mobile{
+	Apple(String mobileName) {
+		super(mobileName);
+	}
 	public void features() {
 		System.out.println("6.3 inch display");
 		System.out.println("FHD resolution");
 		System.out.println("3500 mAH Battery");
 	}
-	public void displayPrice(String Mobile) {
-		System.out.println("Price of "+Mobile+" : "+97000);
+	public void displayPrice() {
+		System.out.println("Price of "+mobileName+" : "+97000);
 	}
 }
 class Oneplus extends Mobile{
+	Oneplus(String mobileName) {
+		super(mobileName);
+	}
 	public void features() {
 		System.out.println("6.6 inch display");
 		System.out.println("FHD resolution");
 		System.out.println("4000 mAH Battery");
 	}
-	public void displayPrice(String Mobile) {
-		System.out.println("Price of "+Mobile+" : "+42000);
+	public void displayPrice() {
+		System.out.println("Price of "+mobileName+" : "+42000);
 	}
 }
 
 public class OCP {
 	public static void main(String[] args) {
-		Apple iphone=new Apple();
+		System.out.println(args[1]);
+		Apple iphone=new Apple("iPhone X");
 		iphone.features();
-		iphone.displayPrice("iPhone X");
-		Oneplus oneplus=new Oneplus();
+		iphone.displayPrice();
+		Oneplus oneplus=new Oneplus("OnePlus 7");
 		oneplus.features();
-		oneplus.displayPrice("OnePlus 7");
+		oneplus.displayPrice();
 	}
-
 }

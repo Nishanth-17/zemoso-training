@@ -30,18 +30,20 @@ public class DIP {
 	}
 
 }
-
 */
+
 interface Upload{
 	void upload();
 }
 
 class Quora implements Upload{
+	@Override
 	public void upload() {
 		System.out.println("Uploaded to Quora");
 	}
 }
 class Medium implements Upload{
+	@Override
 	public void upload() {
 		System.out.println("Uploaded to Medium");
 	}
