@@ -1,7 +1,46 @@
  
 package practice.oopsconcepts;
 import java.time.*;
-abstract class Ab{
+import java.util.*;
+class oop{
+	public static float evaluateExpression(String s) {
+        String[] words = s.split(" ");
+        Stack<Float> stack = new Stack<>();
+        float res = 0;
+        for (int i = 0; i < words.length; i++) {
+            String ch = words[i];
+            if (ch.equals("+") || ch.equals("-") || ch.equals("*") || ch.equals("/")) {
+                float j = stack.pop();
+                float k = stack.pop();
+                switch (ch) {
+                    case "+":
+                        res = j + k;
+                        break;
+                    case "-":
+                        res = k - j;
+                        break;
+                    case "*":
+                        res = j * k;
+                        break;
+                    case "/":
+                        res = j / k;
+                        break;
+                    default:
+                        res = 0;
+                }
+                stack.push(res);
+            } 
+            else
+                stack.push(Float.parseFloat(ch));
+        }
+        res=stack.pop();
+        return res;
+    }
+public static void main(String args[]) {
+	System.out.println(evaluBateExpression("2.5 3.1 1.1 * + 9.9 -"));
+}
+}
+/*abstract class Ab{
 	public void print() {
 		System.out.println("Hello");
 	}
@@ -11,7 +50,7 @@ class oop extends Ab{
 		oop obj=new oop();
 		obj.print();
 }
-}
+}*/
 /*
 //Passing reference as a parameter
 class City{
